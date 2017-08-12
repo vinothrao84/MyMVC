@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MyMVC.Models.UserContext>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>User View</h2>
+
+<table>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DOB)
+            </td>
+        </tr>
+    }
+</table>
